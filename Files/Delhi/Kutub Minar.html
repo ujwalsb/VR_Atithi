@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VR ATITHI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../../CSS/all_page.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+<style>
+
+
+
+</style>
+
+
+
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Slider Container -->
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="../../Images/Delhi/kutub minar/qutub 3.jpg" alt="Red Fort 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="../../Images/Delhi/kutub minar/qutub 2.jpg" alt="Red Fort 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="../../Images/Delhi/kutub minar/kutab1.jpeg" alt="Red Fort 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Overlaid Text Content -->
+    <div class="hero-content">
+      <h1>Kutub Minar</h1>
+      <p class="tagline"> Delhi iconic Qutub Minar</p>
+    </div>
+  </section>
+  
+  <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
+  <script>
+    // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+  
+    // Helper function to show the correct slide
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      // Show the targeted slide
+      slides[index].classList.add('active');
+    }
+  
+    // Automatically move to the next slide every 3 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000); // 3000 = 3 seconds
+  </script>
+  
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="description">
+      <h2>Kutub Minar</h2>
+      <p>
+        Step into history and gaze upon Delhi’s iconic Qutub Minar. This UNESCO World Heritage Site isn't just a monument; it's a journey through time. Standing at 72.5 meters (237.8 feet), this masterpiece is the tallest masonry tower in India. The monument, constructed from red and buff sandstone in the 12th century, has withstood the test of time. Marvel at its intricate carvings, design, projecting balconies, and staggering height—which has drawn people from around the globe.</p>
+        <p> Minar (also spelt as Qutb Minar or Qutab Minar) was built by Qutb-ud-din Aibak, founder of the Delhi Sultanate. It stands tall as a ‘victory tower’ and is part of the sprawling Qutub Complex, an archaeological treasure trove which lies at Lal Kot, Delhi's oldest fortified city founded by the Tomar Rajputs. Come and explore this magnificent piece of history and ancient craftsmanship!</p> <br> 
+
+      <a href="https://en.wikipedia.org/wiki/Qutb_Minar" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="map-section">
+      <!-- Replace 'map.jpg' with an actual map image or embed a real map -->
+      <img src="../../Images/Delhi/Taj mahal/Taj map.png" alt="Map of Delhi" class="map-image" />
+      <div class="info-box">
+        <h3>ABOUT</h3>
+        <p><strong>Location:</strong> New Delhi</p>
+        <p><strong>Temperature:</strong> 25°C - 35°C</p>
+        <p><strong>Nearest Metro:</strong> Rajiv Chowk</p>
+        <!-- Add your location link here -->
+        <p>
+          <strong>My Location:</strong>
+          <a 
+            href="https://www.google.com/maps/place/Qutab+Minar/@28.5244306,77.1805923,17z/data=!3m1!4b1!4m6!3m5!1s0x390d1e065cd167c1:0x2611634c73883b00!8m2!3d28.524426!4d77.1852057!16zL20vMDJjZnhq?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+    </div>  
+  </section>
+
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Attractions <br><span>Nearby</span></h2>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="Taj Mahal.html">
+            <img src="../../Images/Delhi/Taj mahal/taj hd1.jpg" alt="War Memorial" /></a>
+        <h3>Taj Mahal</h3>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="Lotus.html">
+            <img src="../../Images/Delhi/Lotus temple/lotus 1.jpeg" alt="War Memorial" /></a>
+        <h3>Lotus Temple</h3>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="Jama Masjid.html">
+            <img src="../../Images/Delhi/Jama Majid/jama 1.jpeg" alt="War Memorial" /></a>
+        <h3>Jama Masjid</h3>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <a href="../Delhi/Red fort.html">
+            <img src="../../Images/Delhi/Red fort/red 1 hd.jpg" alt="War Memorial" /></a>
+        <h3>Red Fort</h3>
+      </div>
+    </div>
+    <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
+  </section>
+
+
+
+
+            <!-- Book Now Button -->
+      <a href="https://www.google.com/maps/@28.5253665,77.1863795,3a,75y,243.41h,99.94t/data=!3m7!1e1!3m5!1s7fo6-tGZsdrZwuFbXcdYew!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-9.942727957589142%26panoid%3D7fo6-tGZsdrZwuFbXcdYew%26yaw%3D243.41467050105197!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D  " class="book-now-btn">Show VR Model</a>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VR ATITHI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../../CSS/all_page.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+<style>
+
+
+
+</style>
+
+
+
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Slider Container -->
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="../../Images/Delhi/Jama Majid/jama 1.jpeg" alt="Red Fort 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="../../Images/Delhi/Jama Majid/jama 2.jpeg" alt="Red Fort 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="../../Images/Delhi/Jama Majid/jama 3.jpeg" alt="Red Fort 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Overlaid Text Content -->
+    <div class="hero-content">
+      <h1>Jama Masjid</h1>
+      <p class="tagline">Architecture reflecting Mughal splendour</p>
+    </div>
+  </section>
+  
+  <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
+  <script>
+    // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+  
+    // Helper function to show the correct slide
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      // Show the targeted slide
+      slides[index].classList.add('active');
+    }
+  
+    // Automatically move to the next slide every 3 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000); // 3000 = 3 seconds
+  </script>
+  
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="description">
+      <h2>Jama Masjid</h2>
+      <p>
+        Step into an architectural marvel as you enter Jama Masjid, an iconic mosque that showcases the grandeur and opulence of Mughal India. This breathtaking structure, among India's largest in terms of size, will enchant with its intricate design and beautiful aesthetics - its towering minarets, intricately carved walls and marble domes being just some examples of exquisite artistry from Mughal dynasty - with every corner reflecting its grandeur and splendour of time!</p> <br> 
+
+      <a href="https://en.wikipedia.org/wiki/Jama_Mosque,_Delhi" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="map-section">
+      <!-- Replace 'map.jpg' with an actual map image or embed a real map -->
+      <img src="../../Images/Delhi/Taj mahal/Taj map.png" alt="Map of Delhi" class="map-image" />
+      <div class="info-box">
+        <h3>ABOUT</h3>
+        <p><strong>Location:</strong> New Delhi</p>
+        <p><strong>Temperature:</strong> 25°C - 35°C</p>
+        <p><strong>Nearest Metro:</strong> Rajiv Chowk</p>
+        <!-- Add your location link here -->
+        <p>
+          <strong>My Location:</strong>
+          <a 
+            href="https://www.google.com/maps/place/Jama+Masjid/@28.6506839,77.2308672,17z/data=!3m1!4b1!4m6!3m5!1s0x390cfd18df89b215:0xdd57369e29bf9d96!8m2!3d28.6506792!4d77.2334421!16zL20vMDR5emo1?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+    </div>  
+  </section>
+
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Attractions <br><span>Nearby</span></h2>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="Taj Mahal.html">
+            <img src="../../Images/Delhi/Taj mahal/taj hd1.jpg" alt="War Memorial" /></a>
+        <h3>Taj Mahal</h3>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="Lotus.html">
+            <img src="../../Images/Delhi/Lotus temple/lotus 1.jpeg" alt="War Memorial" /></a>
+        <h3>Lotus Temple</h3>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="Kutub Minar.html">
+            <img src="../../Images/Delhi/kutub minar/kutab1.jpeg" alt="War Memorial" /></a>
+        <h3>Kutub Minar</h3>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <a href="../Delhi/Red fort.html">
+            <img src="../../Images/Delhi/Red fort/red 1 hd.jpg" alt="War Memorial" /></a>
+        <h3>Red Fort</h3>
+      </div>
+    </div>
+    <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
+  </section>
+
+
+
+
+            <!-- Book Now Button -->
+      <a href="https://sketchfab.com/models/d02e8cdef15946408be6613fc5d1f0ff/embed  " class="book-now-btn">Show VR Model</a>
+
+</body>
+</html>
