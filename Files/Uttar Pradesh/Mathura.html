@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VR ATITHI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../../CSS/all_page.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+<style>
+
+
+
+</style>
+
+
+
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Slider Container -->
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="../../Images/Uttar Pradesh/Mathara/math1.jpg" alt="Red Fort 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="../../Images/Uttar Pradesh/Mathara/math 2.jpg" alt="Red Fort 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="../../Images/Uttar Pradesh/Mathara/math 3.jpg" alt="Red Fort 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Overlaid Text Content -->
+    <div class="hero-content">
+      <h1>Mathur</h1>
+      <p class="tagline">A symbol of power and beauty</p>
+    </div>
+  </section>
+  
+  <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
+  <script>
+    // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+  
+    // Helper function to show the correct slide
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      // Show the targeted slide
+      slides[index].classList.add('active');
+    }
+  
+    // Automatically move to the next slide every 3 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000); // 3000 = 3 seconds
+  </script>
+  
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="description">
+      <h2>Mathura</h2>
+      <p>
+        Mathura is a sacred city in Uttar Pradesh, northern India. The deity Lord Krishna is said to have been born on the site of Sri Krishna Janma Bhoomi, a Hindu temple. Dotting the Yamuna River are 25 ghats (flights of steps down to the water), of which Vishram Ghat is considered the holiest. Sati Burj is a 16th-century memorial tower. Dwarkadhish Temple has a carved entrance and a black-marble idol of Lord Krishna. </p> <br> 
+
+      <a href="https://en.wikipedia.org/wiki/Red_Fort" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="map-section">
+      <!-- Replace 'map.jpg' with an actual map image or embed a real map -->
+      <img src="../../Images/Uttar Pradesh/Mathara/math map.png" alt="Map of Delhi" class="map-image" />
+      <div class="info-box">
+        <h3>ABOUT</h3>
+        <p><strong>Location:</strong> New Delhi</p>
+        <p><strong>Temperature:</strong> 25°C - 35°C</p>
+        <p><strong>Nearest Metro:</strong> Rajiv Chowk</p>
+        <!-- Add your location link here -->
+        <p>
+          <strong>My Location:</strong>
+          <a 
+            href="https://www.google.com/maps/place/Mathura,+Uttar+Pradesh/@27.4743744,77.6841546,13z/data=!3m1!4b1!4m6!3m5!1s0x397371163d4d5205:0x4273a09defe10ea5!8m2!3d27.4924134!4d77.673673!16zL20vMDFwcng1?entry=ttu&g_ep=EgoyMDI1MDIwNS4wIKXMDSoASAFQAw%3D%3D" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+    </div>  
+  </section>
+
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Attractions <br><span>Nearby</span></h2>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="../Delhi/Taj Mahal.html">
+          <img src="../../Images/Delhi/Taj mahal/taj 3.jpg" alt="War Memorial" /></a>
+      <h3>Taj Mahal</h3>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="Kutub Minar.html">
+          <img src="../../Images/Delhi/kutub minar/kutab1.jpeg" alt="War Memorial" /></a>
+      <h3>Kutub Minar</h3>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="Lotus.html">
+          <img src="../../Images/Delhi/Lotus temple/lotus 1.jpeg" alt="War Memorial" /></a>
+      <h3>Lotus Temple</h3>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <a href="Jama Masjid.html">
+          <img src="../../Images/Delhi/Jama Majid/jama 1.jpeg" alt="War Memorial" /></a>
+      <h3>Jama Masjid</h3>
+      </div>
+    </div>
+    <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
+  </section>
+
+
+
+
+            <!-- Book Now Button -->
+      <a href="https://www.view360.in/virtualtour/madurai/" class="book-now-btn">Show VR Model</a>
+
+</body>
+</html>
