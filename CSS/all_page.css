@@ -281,3 +281,20 @@
           background-color:   #f90c0c;  /* Darker shade of orange */
           transform: scale(1.1);  /* Slight scale up on hover */
       }
+
+
+      /* back button */
+
+      .Back_btn {
+        /* position; */
+        bottom: 20px;  /* Position it 20px from the bottom of the page */
+        left: 20px;   /* Position it 20px from the right edge */
+        background-color: #99a9f6;  /* Orange background color */
+        color: white;  /* White text color */
+        padding: 15px 25px;
+        font-size: 1.2rem;
+        text-decoration: none;  /* Remove underline */
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
+        transition: background-color 0.3s ease, transform 0.3s ease;  
+    } 
