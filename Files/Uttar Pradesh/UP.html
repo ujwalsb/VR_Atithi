@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VR ATITHI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../../CSS/all_page.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+<style>
+/* galery box */
+
+
+
+</style>
+
+
+
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Slider Container -->
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="/Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="Red Fort 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="/Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="Red Fort 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="/Images/Uttar Pradesh/Mathara/math 1.jpg" alt="Red Fort 3" />
+      </div>
+      <div class="slide">
+        <img src="/Images/Uttar Pradesh/up img/2.jpg" alt="Red Fort 3" />
+      </div>
+      <div class="slide">
+        <img src="/Images/Uttar Pradesh/up img/1.jpg" alt="Red Fort 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Overlaid Text Content -->
+    <div class="hero-content">
+      <h1>Uttar Pradesh</h1>
+      <p class="tagline"></p>
+    </div>
+  </section>
+  
+  <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
+  <script>
+    // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+  
+    // Helper function to show the correct slide
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      // Show the targeted slide
+      slides[index].classList.add('active');
+    }
+  
+    // Automatically move to the next slide every 3 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000); // 3000 = 3 seconds
+  </script>
+  
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="description">
+      <h2>Uttar pradesh A city of Spirtual</h2>
+      <p>
+        Uttar Pradesh (UP) is a state in northern India, known for its rich cultural heritage, 
+        historical significance, and large population. It is India's most populous state, with 
+        cities like Lucknow (the capital), Varanasi, and Agra. UP is home to the iconic Taj Mahal,
+         sacred rivers like the Ganges, and important religious sites for Hindus, Buddhists, and Jains. 
+         The state's economy is driven by agriculture, manufacturing, and services. It plays a key role 
+         in India's politics due to its size and number of parliamentary seats.</p> <br> 
+
+      <a href="https://en.wikipedia.org/wiki/Uttar_Pradesh" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="map-section">
+      <!-- Replace 'map.jpg' with an actual map image or embed a real map -->
+      <img src="../../Images/Uttar Pradesh/up img/up map.png" alt="Map of UP" class="map-image" />
+      <div class="info-box">
+        <h3>ABOUT</h3>
+        <p><strong>Location:</strong> Uttar Pradesh</p>
+        <p><strong>Temperature:</strong> 25°C - 35°C</p>
+        <p><strong>Nearest Railway:</strong> Mathura</p>
+        <!-- Add your location link here -->
+        <p>
+          <strong>My Location:</strong>
+          <a 
+            href="https://www.google.com/maps/place/Uttar+Pradesh/@27.7765725,79.6387598,10.25z/data=!4m6!3m5!1s0x39994e9f7b4a09d3:0xf6a5476d3617249d!8m2!3d27.5705886!4d80.0981869!16zL20vMDFocG5o?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+    </div>  
+  </section>
+
+
+<!-- box galery -->
+ <div class="boxgride">
+<div class="gallery_box">
+  <input type="checkbox" >
+  <img src="/Images/Uttar Pradesh/up img/1.jpg" alt="a forest after an apocalypse">
+  <img src="/Images/Uttar Pradesh/up img/2.jpg" alt="a waterfall and many rocks">
+  <img src="/Images/Uttar Pradesh/up img/3.jpg" alt="a house on a mountain">
+  <img src="/Images/Uttar Pradesh/up img/4.jpg" alt="sime pink flowers">
+  <img src="/Images/Uttar Pradesh/up img/5.jpg" alt="big rocks with some trees">
+  <img src="/Images/Uttar Pradesh/up img/6.jpg" alt="a waterfall, a lot of tree and a great view from the sky">
+  <img src="/Images/Uttar Pradesh/up img/7.jpg" alt="a cool landscape">
+  <img src="/Images/Uttar Pradesh/up img/8.jpg" alt="inside a town between two big buildings">
+  <img src="/Images/Uttar Pradesh/Mathara/math 1.jpg" alt="a great view of the sea above the mountain">
+</div>
+</div>
+
+
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Attractions <br><span>Nearby</span></h2>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="Mathura.html">
+            <img src="../../Images/Uttar Pradesh/Mathara/math 3.jpg" alt="War Memorial" />
+        <h3>Mathura</h3></a>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="Taj Mahal.html">
+            <img src="../../Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="War Memorial" /></a>
+        <h3>Taj Mahal</h3>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="Ram Mandir.html">
+            <img src="../../Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="War Memorial" /></a>
+        <h3>Ram Mandir</h3>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <a href="Kashi.html">
+            <img src="/Images/Uttar Pradesh/Kashi/kashi 1.jpg" alt="War Memorial" /></a>
+        <h3>Kashi Viaswanath Temple</h3>
+      </div>
+    </div>
+    <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
+  </section>
+
+
+
+
+            <!-- Book Now Button -->
+      <!-- <a href="https://www.google.com/maps/@28.5253665,77.1863795,3a,75y,243.41h,99.94t/data=!3m7!1e1!3m5!1s7fo6-tGZsdrZwuFbXcdYew!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-9.942727957589142%26panoid%3D7fo6-tGZsdrZwuFbXcdYew%26yaw%3D243.41467050105197!7i13312!8i6656?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D  " class="book-now-btn">Show VR Model</a> -->
+
+</body>
+</html>

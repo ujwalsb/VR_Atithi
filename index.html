@@ -139,7 +139,7 @@
   border-radius: 10px;
   display: block;
   border: 2px solid #ea5409;
-  background-color: rgb(170, 248, 147);
+  background-color: rgb(223, 232, 221);
   padding: 10px;
 }
 
@@ -167,7 +167,91 @@
       text-align: center;
     }
 
+
+
+
+    /* button for virtual tour view more*/
+    .view-more-btn {
+      padding: 0.75rem 1.5rem;
+      background-color: #fff0ee;
+      color: #fff;
+      border: none;
+      font-size: 1rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-items: center;
+    }
+
+    .view-more-btn:hover {
+      background-color: #cf3e2f;
+    }
+
+
+    /* pop up message */
+        /* Modal container styling */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+        }
+
+        /* Modal content box */
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 500px;
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Close button */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Image styling */
+        .modal img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
     </style>
+
+
+<!-- pop up message  -->
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content"><a href=""></a>
+      <span class="close">&times;</span>
+      <h2>Maha Kumbh</h2>
+      <img src="/Images/Uttar Pradesh/up img/mah kumbh.jpg" alt="Popup Image">
+      <p>Visit indiest Biggest Maha Kumbh <br>
+        January 13 to February 26, 2025. </p></a>
+  </div>
+
+</div>
+
 
 
     <!-- Full-screen video -->
@@ -178,14 +262,17 @@
         </video>
     </div>
 
-   
+
+
+
+<!-- drop down for destination -->
     <div class="drop_down1">
       <label for="location">Choose a Destination:</label>
       <select class="location" onchange="redirectPage()">
         <a href="./Files/Delhi/Delhi.html"><option value="./Files/Delhi/Delhi.html" >Delhi</option></a>
-        <option value="#" >Mahrashtra</option>
-        <option value="#" >Uttar Pradesh</option>
-        <option value="https://example.com/location3" >Location 3</option>
+        <a href="/Files/Uttar Pradesh/UP.html"><option value="/Files/Uttar Pradesh/UP.html" >Uttar Pradesh</option></a>
+        <option value="#" >Maharshtra</option>
+        
       </select>
     </div>
   
@@ -198,81 +285,56 @@
   <div class="content">
     <!-- Title -->
     <h1 class="title_t1">Virtual Models</h1>
-    
+
+
+    <!-- sliding images -->
   <div class="slider" id="slider">
-    <div class="slide">
+    <div class="slide"><a href="">
       <div class="slide-content">
-        <img src="./Images/Delhi/Jama Majid/jama 1.jpeg" alt="Image 1" class="slide-image" />
-        <div class="slide-title">Card 1</div>
-        <div class="slide-description">This is the description for Card 1.</div>
+        <img src="./Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="Image 1" class="slide-image" />
+        <div class="slide-title">Ram Mandir</div>
+        <div class="slide-description">This is the description for Card 1.</div></a>
+      </div>
+    </div>
+    <div class="slide"><a href="./Files/Uttar Pradesh/Taj Mahal.html">
+      <div class="slide-content">
+        <img src="/Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="Image 2" class="slide-image" /></a>
+        <div class="slide-title">Taj Mahal</div>
+        <div class="slide-description">This is the description for Card 2.</div></a>
+      </div>
+    </div>
+    <div class="slide">
+      <div class="slide-content"><a href="/Files/Delhi/Red fort.html">
+        <img src="/Images/Delhi/Red fort/red 1 hd.jpg" alt="Image 3" class="slide-image" />
+        <div class="slide-title">Red Fort</div>
+        <div class="slide-description">This is the description for Card 3.</div></a>
+      </div>
+    </div>
+    <div class="slide"><a href="/Files/Uttar Pradesh/Mathura.html">
+      <div class="slide-content">
+        <img src="/Images/Uttar Pradesh/Mathara/math 2.jpg" alt="Image 4" class="slide-image" />
+        <div class="slide-title">Mathura</div>
+        <div class="slide-description">This is the description for Card 4.</div></a>
       </div>
     </div>
     <div class="slide">
       <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 2" class="slide-image" />
-        <div class="slide-title">Card 2</div>
-        <div class="slide-description">This is the description for Card 2.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 3" class="slide-image" />
-        <div class="slide-title">Card 3</div>
-        <div class="slide-description">This is the description for Card 3.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 4" class="slide-image" />
-        <div class="slide-title">Card 4</div>
-        <div class="slide-description">This is the description for Card 4.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 5" class="slide-image" />
-        <div class="slide-title">Card 5</div>
+        <img src="/Images/Uttar Pradesh/Kashi/kashi 1.jpg" alt="Image 5" class="slide-image" />
+        <div class="slide-title">Kashi Vishwanath Temple</div>
         <div class="slide-description">This is the description for Card 5.</div>
       </div>
     </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 6" class="slide-image" />
-        <div class="slide-title">Card 6</div>
-        <div class="slide-description">This is the description for Card 6.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 7" class="slide-image" />
-        <div class="slide-title">Card 7</div>
-        <div class="slide-description">This is the description for Card 7.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 8" class="slide-image" />
-        <div class="slide-title">Card 8</div>
-        <div class="slide-description">This is the description for Card 8.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 9" class="slide-image" />
-        <div class="slide-title">Card 9</div>
-        <div class="slide-description">This is the description for Card 9.</div>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="slide-content">
-        <img src="https://via.placeholder.com/400x200" alt="Image 10" class="slide-image" />
-        <div class="slide-title">Card 10</div>
-        <div class="slide-description">This is the description for Card 10.</div>
-      </div>
-    </div>
+   
+    
+    
   </div>
   <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
   <button class="next" onclick="moveSlide(1)">&#10095;</button>
+<!-- View More Button -->
+<div class="view-more-container">
+  <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+</div>
+  
 </div>
 <script>
   let currentIndex = 0;
@@ -295,20 +357,48 @@
         window.location.href = selectedLocation;
       }
     }
+
+
+
+  //  pop script
+    // Get modal elements
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    // Show the modal immediately when the page loads (after refresh)
+    window.onload = function() {
+        modal.style.display = "block";
+    }
+
+    // Close the modal when the "x" is clicked
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Close the modal when clicking outside of the modal content
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
 </script>
 
 
  
-
+  <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
 
 
         <!-- View All Button -->
         <!-- <button class="view-all" href="./files/all_place.html">View All</button> -->
-
+<!-- 
         <a href="./files/all_place.html"> 
             <button class="view-all">View All</button>
-      </a>
-    </div>
+      </a> -->
+    <!-- </div> -->
 
 </body>
 </html>
