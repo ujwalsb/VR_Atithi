@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-image: url('path_to_your_image');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.header h1 span {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.travel-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.travel-options button {
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.travel-options button.active {
+  background-color: #e50000;
+}
+
+.search-form {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.search-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputs, .options {
+  display: flex;
+  gap: 20px;
+}
+
+.inputs input, .options select {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+}
+
+.fare-options {
+  display: flex;
+  gap: 20px;
+}
+
+.search-btn {
+  padding: 15px;
+  background-color: #e50000;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.search-btn:hover {
+  background-color: #cc0000;
+}
+
+</style>
+
+
+
+  <div class="container">
+    <header class="header">
+      <h1>Inspired? <br><span>GET STARTED</span></h1>
+    </header>
+
+    <div class="travel-options">
+      <button class="active">Flights</button>
+      <button>Trains</button>
+      <button>Buses</button>
+      <button>Cabs</button>
+      <button>Accommodations</button>
+      <button>Travel Partners</button>
+    </div>
+
+    <div class="search-form">
+      <form>
+        <div class="trip-type">
+          <label>
+            <input type="radio" name="trip" checked> One Way
+          </label>
+          <label>
+            <input type="radio" name="trip"> Round Trip
+          </label>
+        </div>
+        
+        <div class="inputs">
+          <input type="text" placeholder="From" required>
+          <input type="text" placeholder="To" required>
+          <input type="date" required>
+          <input type="date" placeholder="Return">
+        </div>
+
+        <div class="fare-options">
+          <label>
+            <input type="radio" name="fare" checked> Regular Fares
+          </label>
+          <label>
+            <input type="radio" name="fare"> Armed Forces Fares
+          </label>
+          <label>
+            <input type="radio" name="fare"> Student Fares
+          </label>
+          <label>
+            <input type="radio" name="fare"> Senior Citizen Fares
+          </label>
+          <label>
+            <input type="radio" name="fare"> Doctors & Nurses Fares
+          </label>
+        </div>
+
+        <div class="options">
+          <select>
+            <option>1 Traveler</option>
+            <option>2 Travelers</option>
+          </select>
+
+          <select>
+            <option>Economy</option>
+            <option>Business</option>
+          </select>
+        </div>
+
+        <label>
+          <input type="checkbox"> Direct flight only
+        </label>
+
+        <button type="submit" class="search-btn">Search</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VR ATITHI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../../CSS/all_page.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+<style>
+
+
+
+
+
+</style>
+
+
+
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Slider Container -->
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="/Images/Uttar Pradesh/Kashi/kashi 1.jpg" alt="Red Fort 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="/Images/Uttar Pradesh/Kashi/kashi 2.jpg" alt="Red Fort 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="/Images/Uttar Pradesh/Kashi/kashi 3.jpg" alt="Red Fort 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Overlaid Text Content -->
+    <div class="hero-content">
+      <h1>Shri Kashi Vishwanath Temple</h1>
+      <p class="tagline"></p>
+    </div>
+  </section>
+  
+  <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
+  <script>
+    // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+  
+    // Helper function to show the correct slide
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      // Show the targeted slide
+      slides[index].classList.add('active');
+    }
+  
+    // Automatically move to the next slide every 3 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000); // 3000 = 3 seconds
+  </script>
+  
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="description">
+      <h2>Shri Kashi Vishwanath Temple</h2>
+      <p>
+        Kashi Vishwanath Temple, located in Varanasi, Uttar Pradesh, is one of the most revered Hindu temples 
+        dedicated to Lord Shiva. It stands on the western bank of the holy river Ganges and is considered one of the twelve 
+        Jyotirlingas, the holiest Shiva temples. The temple has been a center of spiritual significance for centuries, drawing millions
+         of pilgrims annually who come to seek blessings and perform rituals. The current structure was built in 1780 by Queen Ahilyabai
+          Holkar of Indore. Kashi Vishwanath is a symbol of Hindu faith, spirituality, and ancient Indian culture.
+          <br>
+          <H4><a href="https://www.youtube.com/watch?v=4GviNv4JzQ4&t=40s">Watch Kashi Arti In VR </a></H4>
+</p> <br> 
+
+      <a href="https://en.wikipedia.org/wiki/Kashi_Vishwanath_Temple" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="map-section">
+      <!-- Replace 'map.jpg' with an actual map image or embed a real map -->
+      <img src="../../Images/Uttar Pradesh/up img/up map.png" alt="Map of Delhi" class="map-image" />
+      <div class="info-box">
+        <h3>ABOUT</h3>
+        <p><strong>Location:</strong> Kashi</p>
+        <p><strong>Temperature:</strong> 25°C - 35°C</p>
+        <p><strong>Nearest Railway:</strong> Kashi</p>
+        <!-- Add your location link here -->
+        <p>
+          <strong>My Location:</strong>
+          <a 
+            href="https://www.google.com/maps/place/Taj+Mahal/@27.1751448,78.03313,16z/data=!4m10!1m2!2m1!1sTaj+Mahal+Dharmapuri,+Forest+Colony,+Tajganj,+Agra+282001+India!3m6!1s0x39747121d702ff6d:0xdd2ae4803f767dde!8m2!3d27.1751448!4d78.0421422!15sCj9UYWogTWFoYWwgRGhhcm1hcHVyaSwgRm9yZXN0IENvbG9ueSwgVGFqZ2FuaiwgQWdyYSAyODIwMDEgSW5kaWFaPiI8dGFqIG1haGFsIGRoYXJtYXB1cmkgZm9yZXN0IGNvbG9ueSB0YWpnYW5qIGFncmEgMjgyMDAxIGluZGlhkgEIbW9udW1lbnTgAQA!16zL20vMGw4Y2I?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D" 
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+    </div>  
+  </section>
+
+
+
+
+
+
+
+
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Attractions <br><span>Nearby</span></h2>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="Ram Mandir.html">
+            <img src="/Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="War Memorial" /></a>
+        <h3>Ram Mandir</h3>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="Taj Mahal.html">
+            <img src="/Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="War Memorial" /></a>
+        <h3>Taj Mahal</h3>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="Mathura.html">
+            <img src="/Images/Uttar Pradesh/Mathara/math 1.jpg" alt="War Memorial" /></a>
+        <h3>Mathura</h3>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <a href="jhashi.html">
+            <img src="/Images/Uttar Pradesh/jhashi/jhashi 1.jpg" alt="War Memorial" /></a>
+        <h3>Jhanshi Fort</h3>
+      </div>
+    </div>
+    <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
+  </section>
+
+
+
+
+            <!-- Book Now Button -->
+      <a href="https://sketchfab.com/3d-models/shri-kashi-vishwanath-temple-1b31f9e888b640dbbbab371aa8550697/embed" class="book-now-btn">Show VR Model</a>
+
+</body>
+</html>

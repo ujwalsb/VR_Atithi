@@ -234,6 +234,11 @@
             height: auto;
             border-radius: 10px;
         }
+
+
+
+
+
     </style>
 
 
@@ -242,9 +247,9 @@
 <div id="myModal" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content"><a href=""></a>
+  <div class="modal-content">
       <span class="close">&times;</span>
-      <h2>Maha Kumbh</h2>
+      <h2>Maha Kumbh</h2><a href="https://mahakumbhmediaregistration.in/">
       <img src="/Images/Uttar Pradesh/up img/mah kumbh.jpg" alt="Popup Image">
       <p>Visit indiest Biggest Maha Kumbh <br>
         January 13 to February 26, 2025. </p></a>
@@ -269,9 +274,10 @@
     <div class="drop_down1">
       <label for="location">Choose a Destination:</label>
       <select class="location" onchange="redirectPage()">
-        <option value="#" >Maharshtra</option>
+        <option value="" >Select Destination</option>
         <a href="/Files/Uttar Pradesh/UP.html"><option value="/Files/Uttar Pradesh/UP.html" >Uttar Pradesh</option></a>
         <a href="./Files/Delhi/Delhi.html"><option value="./Files/Delhi/Delhi.html" >Delhi</option></a>
+        <a href="./Files/Tamil Nadu/Tamil.html"><option value="./Files/Tamil Nadu/Tamil.html" >Tamil Nadu</option></a>
 
 
         
@@ -291,39 +297,39 @@
 
     <!-- sliding images -->
   <div class="slider" id="slider">
-    <div class="slide"><a href="">
+    <div class="slide"><a href="/Files/Uttar Pradesh/Ram Mandir.html">
       <div class="slide-content">
         <img src="./Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="Image 1" class="slide-image" />
         <div class="slide-title">Ram Mandir</div>
-        <div class="slide-description">This is the description for Card 1.</div></a>
+        <div class="slide-description"></div></a>
       </div>
     </div>
     <div class="slide"><a href="./Files/Uttar Pradesh/Taj Mahal.html">
       <div class="slide-content">
-        <img src="/Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="Image 2" class="slide-image" /></a>
+        <img src="/Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="Image 2" class="slide-image" />
         <div class="slide-title">Taj Mahal</div>
-        <div class="slide-description">This is the description for Card 2.</div></a>
+        <div class="slide-description"></div></a>
       </div>
     </div>
     <div class="slide">
       <div class="slide-content"><a href="/Files/Delhi/Red fort.html">
         <img src="/Images/Delhi/Red fort/red 1 hd.jpg" alt="Image 3" class="slide-image" />
         <div class="slide-title">Red Fort</div>
-        <div class="slide-description">This is the description for Card 3.</div></a>
+        <div class="slide-description"></div></a>
       </div>
     </div>
     <div class="slide"><a href="/Files/Uttar Pradesh/Mathura.html">
       <div class="slide-content">
         <img src="/Images/Uttar Pradesh/Mathara/math 2.jpg" alt="Image 4" class="slide-image" />
         <div class="slide-title">Mathura</div>
-        <div class="slide-description">This is the description for Card 4.</div></a>
+        <div class="slide-description"></div></a>
       </div>
     </div>
-    <div class="slide">
+    <div class="slide"><a href="/Files/Uttar Pradesh/Kashi.html">
       <div class="slide-content">
         <img src="/Images/Uttar Pradesh/Kashi/kashi 1.jpg" alt="Image 5" class="slide-image" />
         <div class="slide-title">Kashi Vishwanath Temple</div>
-        <div class="slide-description">This is the description for Card 5.</div>
+        <div class="slide-description"></div></a>
       </div>
     </div>
    
@@ -339,6 +345,7 @@
   
 </div>
 <script>
+  // sliding left and right 
   let currentIndex = 0;
   const slider = document.getElementById('slider');
   const totalSlides = document.querySelectorAll('.slide').length;
@@ -401,6 +408,10 @@
             <button class="view-all">View All</button>
       </a> -->
     <!-- </div> -->
+
+
+
+    
 
 </body>
 </html>
