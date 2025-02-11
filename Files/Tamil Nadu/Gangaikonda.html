@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VR ATITHI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../../CSS/all_page.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+<style>
+
+
+
+</style>
+
+
+
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Slider Container -->
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="/Images/Tamil Nadu/Gangaikonda/gang 1.jpg" alt="Red Fort 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="/Images/Tamil Nadu/Gangaikonda/gang 2.jpg" alt="Red Fort 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="/Images/Tamil Nadu/Gangaikonda/gang 3.jpg" alt="Red Fort 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Overlaid Text Content -->
+    <div class="Gangaikonda Temple">
+      <h1></h1>
+      <p class="tagline"></p>
+    </div>
+  </section>
+  
+  <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
+  <script>
+    // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+  
+    // Helper function to show the correct slide
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      // Show the targeted slide
+      slides[index].classList.add('active');
+    }
+  
+    // Automatically move to the next slide every 3 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000); // 3000 = 3 seconds
+  </script>
+  
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="description">
+      <h2>Gangaikonda Cholapuram Temple</h2>
+      <p>
+        The Brihadisvara Temple, also known as Gangaikonda Cholapuram Temple, is a Hindu temple dedicated to Shiva located in Gangaikonda Cholapuram, Ariyalur district, Tamil Nadu, India. It was built by Rajendra Chola I in the 11th century CE as part of his new capital.
+        The temple is an example of Chola architecture and is smaller yet more refined than the Brihadeeswarar Temple in Thanjavur.
+        It is part of the Great Living Chola Temples and was declared a UNESCO World Heritage Site in 2004.
+        The temple is an active site with four daily rituals and several yearly festivals, including Maha Sivaratri and Sadhaya vila.</p> <br> 
+
+      <a href="https://en.wikipedia.org/wiki/Gangaikonda_Cholapuram" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="map-section">
+      <!-- Replace 'map.jpg' with an actual map image or embed a real map -->
+      <img src="/Images/Tamil Nadu/map.png" alt="Map of Delhi" class="map-image" />
+      <div class="info-box">
+        <h3>ABOUT</h3>
+        <p><strong>Location:</strong>Tamil Nadu</p>
+        <p><strong>Temperature:</strong> 25°C - 35°C</p>
+        <p><strong>Nearest Railway:</strong></p>
+        <!-- Add your location link here -->
+        <p>
+          <strong>My Location:</strong>
+          <a 
+            href="https://www.google.com/maps/search/Gangaikonda+Cholapuram+Temple/@11.2079743,79.4471361,15z?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+    </div>  
+  </section>
+
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Attractions <br><span>Nearby</span></h2>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="Airavatesvara.html">
+            <img src="/Images/Tamil Nadu/Airavatesvara/2.jpg" alt="War Memorial" /></a>
+        <h3>Airavatesvara Temple</h3>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="Mamallapuram.html">
+            <img src="/Images/Tamil Nadu/Mamallapuram/mallapuram 1.jpg" alt="War Memorial" /></a>
+        <h3>Mamallapuram Temple</h3>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="Thanjavur.html">
+            <img src="/Images/Tamil Nadu/Thanjavur/tanjavuru 1.jpg" alt="War Memorial" /></a>
+        <h3>Thanjavur Temple</h3>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <a href="Triveni.html">
+            <img src="/Images/Tamil Nadu/Triveni/1.jpg" alt="War Memorial" /></a>
+        <h3>Triveni Temple</h3>
+      </div>
+    </div>
+    <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
+  </section>
+
+
+
+
+            <!-- Book Now Button -->
+      <a href="https://www.ttdconline.com/virtualtour/gangaikondacholapuram/index.html " class="book-now-btn">Show VR Model</a>
+
+</body>
+</html>
