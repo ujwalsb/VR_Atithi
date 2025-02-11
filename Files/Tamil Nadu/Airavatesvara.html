@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VR ATITHI</title>
+  <!-- Link to external CSS -->
+  <link rel="stylesheet" href="../../CSS/all_page.css" />
+  <!-- Optional Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet"
+  >
+</head>
+<body>
+<style>
+
+
+
+</style>
+
+
+
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="#">Experiences</a></li>
+        <li><a href="#">Plan your trip</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Slider Container -->
+    <div class="slider">
+      <!-- Slide 1 -->
+      <div class="slide active">
+        <img src="/Images/Tamil Nadu/Airavatesvara/1.jpg" alt="Red Fort 1" />
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="/Images/Tamil Nadu/Airavatesvara/2.jpg" alt="Red Fort 2" />
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="/Images/Tamil Nadu/Airavatesvara/3.jpg" alt="Red Fort 3" />
+      </div>
+      <!-- Add more slides as needed -->
+    </div>
+  
+    <!-- Overlaid Text Content -->
+    <div class="hero-content">
+      <h1>Airavatesvara Temple</h1>
+      <p class="tagline"></p>
+    </div>
+  </section>
+  
+  <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
+  <script>
+    // Select all slides
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+  
+    // Helper function to show the correct slide
+    function showSlide(index) {
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.remove('active');
+      });
+      // Show the targeted slide
+      slides[index].classList.add('active');
+    }
+  
+    // Automatically move to the next slide every 3 seconds
+    setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }, 3000); // 3000 = 3 seconds
+  </script>
+  
+
+  <!-- Main Content -->
+  <section class="main-content">
+    <div class="description">
+      <h2>Airavatesvara Temple</h2>
+      <p>
+        Airavatesvara Temple is a Hindu temple of Chola architecture located in Kumbakonam, Thanjavur District in the South Indian state of Tamil Nadu. This temple, built by Chola emperor Rajaraja II in the 12th century CE is a UNESCO World Heritage Site, along with the Brihadeeswara Temple at Thanjavur, the Gangaikondacholisvaram Temple at Gangaikonda Cholapuram that are referred to as the Great Living Chola Temples.</p> <br> 
+
+      <a href="https://en.wikipedia.org/wiki/Airavatesvara_Temple" class="read-more-btn">Read More</a>
+    </div>
+
+    <div class="map-section">
+      <!-- Replace 'map.jpg' with an actual map image or embed a real map -->
+      <img src="/Images/Tamil Nadu/map.png" alt="Map of Delhi" class="map-image" />
+      <div class="info-box">
+        <h3>ABOUT</h3>
+        <p><strong>Location:</strong>Tamil Nadu</p>
+        <p><strong>Temperature:</strong> 25°C - 35°C</p>
+        <p><strong>Nearest Railway:</strong></p>
+        <!-- Add your location link here -->
+        <p>
+          <strong>My Location:</strong>
+          <a 
+            href="https://www.google.com/maps/place/Dharasuram+Sri+Airavatesvara+Temple/@10.9490828,79.356717,18z/data=!4m6!3m5!1s0x3baacd15bd8b0bbb:0xedd65959af78b9ea!8m2!3d10.948385!4d79.356548!16s%2Fm%2F02q94jg?entry=ttu&g_ep=EgoyMDI1MDIwNS4xIKXMDSoASAFQAw%3D%3D
+            target="_blank
+            rel="noopener noreferrer"
+          >
+            View on Google Maps
+          </a>
+        </p>
+      </div>
+    </div>  
+  </section>
+
+  <!-- Attractions Section -->
+  <section class="attractions">
+    <h2>Attractions <br><span>Nearby</span></h2>
+    <div class="cards">
+      <!-- Card 1 -->
+      <div class="card">
+        <a href="Gangaikonda.html">
+            <img src="/Images/Tamil Nadu/Gangaikonda/gang 1.jpg" alt="War Memorial" /></a>
+        <h3>Gangaikonda Temple</h3>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <a href="Mamallapuram.html">
+            <img src="/Images/Tamil Nadu/Mamallapuram/mallapuram 1.jpg" alt="War Memorial" /></a>
+        <h3>Mamallapuram Temple</h3>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <a href="Thanjavur.html">
+            <img src="/Images/Tamil Nadu/Thanjavur/tanjavuru 1.jpg" alt="War Memorial" /></a>
+        <h3>Thanjavur Temple</h3>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <a href="Triveni.html">
+            <img src="/Images/Tamil Nadu/Triveni/1.jpg" alt="War Memorial" /></a>
+        <h3>Triveni Temple</h3>
+      </div>
+    </div>
+    <!-- View More Button -->
+  <div class="view-more-container">
+    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+  </div>
+  </section>
+
+
+
+
+            <!-- Book Now Button -->
+      <a href="https://www.ttdconline.com/virtualtour/darasuram/index.html" class="book-now-btn">Show VR Model</a>
+
+</body>
+</html>

@@ -100,15 +100,15 @@
       /* Overlaid Text Content */
       .hero-content {
         position: absolute;
-        top: 50%;
+       top: 90%; */
         left: 5%;
         transform: translateY(-50%);
-        color: #2b01ff; /* Adjust text color as needed */
+        color: #01c8ff; /* Adjust text color as needed */
         z-index: 10; /* Ensure content is above the slides */
       }
       
       .hero-content h1 {
-        font-size: 3rem; /* Adjust as needed */
+        font-size: 2rem; /* Adjust as needed */
         margin-bottom: 0.5rem;
       }
       
