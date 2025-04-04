@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <title>VR ATITHI</title>
@@ -8,18 +9,55 @@
   <!-- Optional Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-<style>
-/* galery box */
+  <style>
+    /* galery box */
 
 
+    .booking-section {
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: 20px auto;
+    }
 
-</style>
+    .booking-section h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .booking-section label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+
+    .booking-section input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .book-now-btn1 {
+      background-color: #ff6200;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .book-now-btn:hover {
+      background-color: #ff8533;
+    }
+  </style>
 
 
 
@@ -30,8 +68,8 @@
       <div class="nav-logo">VR ATITHI</div>
       <ul class="nav-links">
         <li><a href="../../index.html">Home</a></li>
-        <li><a href="#">Experiences</a></li>
-        <li><a href="#">Plan your trip</a></li>
+        <li><a href="../about us.html">About Us</a></li>
+        <li><a href="../view all.html">VR Tours</a></li>
       </ul>
     </nav>
   </header>
@@ -60,20 +98,20 @@
       </div>
       <!-- Add more slides as needed -->
     </div>
-  
+
     <!-- Overlaid Text Content -->
     <div class="hero-content">
       <h1>Delhi</h1>
       <p class="tagline"></p>
     </div>
   </section>
-  
+
   <!-- Include the slider JavaScript at the bottom of the page or in a separate file -->
   <script>
     // Select all slides
     const slides = document.querySelectorAll('.slide');
     let currentSlide = 0;
-  
+
     // Helper function to show the correct slide
     function showSlide(index) {
       // Hide all slides
@@ -83,23 +121,32 @@
       // Show the targeted slide
       slides[index].classList.add('active');
     }
-  
+
     // Automatically move to the next slide every 3 seconds
     setInterval(() => {
       currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);
     }, 3000); // 3000 = 3 seconds
   </script>
-  
+
 
   <!-- Main Content -->
   <section class="main-content">
     <div class="description">
       <h2>Delhi A city of beautiful contrasts</h2>
       <p>
-        Delhi, India's vibrant capital, is a world within itself. With its kaleidoscope of scents, sounds, and sights, Delhi never fails to captivate. From its rich history and architectural marvels to its delectable cuisine and vibrant nightlife, the city offers an unforgettable experience.
-One of the world's oldest continuously inhabited cities, Delhi’s roots date back to the era of the ancient Mahabharata, when the city was known as Indraprastha, the legendary home of the Pandavas. Since then, the city has seen empires rise and fall, from the Delhi Sultanate and the Mughals, who left behind architectural marvels, to the British, who shaped parts of it.
-While Delhi is a melting pot of varied cultures, what sets it apart is its diverse character. Here, you can experience the best of both worlds—the timeless elegance of a bygone era alongside the exhilarating energy of a modern megacity. On the one hand, you’ll find the vibrant chaos of narrow lanes, centuries-old monuments, and old-world charm. On the other, the city offers vast green spaces, modern buildings, swanky malls, and colonial-era architecture.</p> <br> 
+        Delhi, India's vibrant capital, is a world within itself. With its kaleidoscope of scents, sounds, and sights,
+        Delhi never fails to captivate. From its rich history and architectural marvels to its delectable cuisine and
+        vibrant nightlife, the city offers an unforgettable experience.
+        One of the world's oldest continuously inhabited cities, Delhi’s roots date back to the era of the ancient
+        Mahabharata, when the city was known as Indraprastha, the legendary home of the Pandavas. Since then, the city
+        has seen empires rise and fall, from the Delhi Sultanate and the Mughals, who left behind architectural marvels,
+        to the British, who shaped parts of it.
+        While Delhi is a melting pot of varied cultures, what sets it apart is its diverse character. Here, you can
+        experience the best of both worlds—the timeless elegance of a bygone era alongside the exhilarating energy of a
+        modern megacity. On the one hand, you’ll find the vibrant chaos of narrow lanes, centuries-old monuments, and
+        old-world charm. On the other, the city offers vast green spaces, modern buildings, swanky malls, and
+        colonial-era architecture.</p> <br>
 
       <a href="https://en.wikipedia.org/wiki/Delhi" class="read-more-btn">Read More</a>
     </div>
@@ -115,34 +162,38 @@ While Delhi is a melting pot of varied cultures, what sets it apart is its diver
         <!-- Add your location link here -->
         <p>
           <strong>My Location:</strong>
-          <a 
-            href="https://www.google.com/maps/place/Qutab+Minar/@28.5244306,77.1805923,17z/data=!3m1!4b1!4m6!3m5!1s0x390d1e065cd167c1:0x2611634c73883b00!8m2!3d28.524426!4d77.1852057!16zL20vMDJjZnhq?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D" 
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://www.google.com/maps/place/Qutab+Minar/@28.5244306,77.1805923,17z/data=!3m1!4b1!4m6!3m5!1s0x390d1e065cd167c1:0x2611634c73883b00!8m2!3d28.524426!4d77.1852057!16zL20vMDJjZnhq?entry=ttu&g_ep=EgoyMDI1MDIwMy4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank" rel="noopener noreferrer">
             View on Google Maps
           </a>
         </p>
       </div>
-    </div>  
+
+
+
+    </div>
+
+
+
+
   </section>
+  
 
-
-<!-- box galery -->
- <div class="boxgride">
-<div class="gallery_box">
-  <input type="checkbox" >
-  <img src="/Images/Delhi/Red fort/red 2.jpg" alt="a forest after an apocalypse">
-  <img src="/Images/Delhi/Lotus temple/lotus 1.jpeg" alt="a waterfall and many rocks">
-  <img src="/Images/Delhi/kutub minar/kutab1.jpeg" alt="a house on a mountain">
-  <img src="/Images/Delhi/Jama Majid/jama 1.jpeg" alt="sime pink flowers">
-  <img src="/Images/Delhi/Humayun/hum 1.jpg" alt="big rocks with some trees">
-  <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
-  <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
-  <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
-  <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
-</div>
-</div>
+  <!-- box galery -->
+  <div class="boxgride">
+    <div class="gallery_box">
+      <input type="checkbox">
+      <img src="../../Images/Delhi/Red fort/red 2.jpg" alt="a forest after an apocalypse">
+      <img src="../../Images/Delhi/Lotus temple/lotus 1.jpeg" alt="a waterfall and many rocks">
+      <img src="../../Images/Delhi/kutub minar/kutab1.jpeg" alt="a house on a mountain">
+      <img src="../../Images/Delhi/Jama Majid/jama 1.jpeg" alt="sime pink flowers">
+      <img src="../../Images/Delhi/Humayun/hum 1.jpg" alt="big rocks with some trees">
+      <img src="https://picsum.photos/id/1039/300/300" alt="a waterfall, a lot of tree and a great view from the sky">
+      <img src="https://picsum.photos/id/110/300/300" alt="a cool landscape">
+      <img src="https://picsum.photos/id/1047/300/300" alt="inside a town between two big buildings">
+      <img src="https://picsum.photos/id/1057/300/300" alt="a great view of the sea above the mountain">
+    </div>
+  </div>
 
 
   <!-- Attractions Section -->
@@ -152,39 +203,92 @@ While Delhi is a melting pot of varied cultures, what sets it apart is its diver
       <!-- Card 1 -->
       <div class="card">
         <a href="Kutub Minar.html">
-            <img src="../../Images/Delhi/kutub minar/kutab1.jpeg" alt="War Memorial" /></a>
+          <img src="../../Images/Delhi/kutub minar/kutab1.jpeg" alt="War Memorial" /></a>
         <h3>Humayun's Tomba</h3>
       </div>
       <!-- Card 2 -->
       <div class="card">
         <a href="Lotus.html">
-            <img src="../../Images/Delhi/Lotus temple/lotus 1.jpeg" alt="War Memorial" /></a>
+          <img src="../../Images/Delhi/Lotus temple/lotus 1.jpeg" alt="War Memorial" /></a>
         <h3>Lotus Temple</h3>
       </div>
       <!-- Card 3 -->
       <div class="card">
         <a href="Jama Masjid.html">
-            <img src="../../Images/Delhi/Jama Majid/jama 1.jpeg" alt="War Memorial" /></a>
+          <img src="../../Images/Delhi/Jama Majid/jama 1.jpeg" alt="War Memorial" /></a>
         <h3>Jama Masjid</h3>
       </div>
       <!-- Card 4 -->
       <div class="card">
         <a href="../Delhi/Red fort.html">
-            <img src="../../Images/Delhi/Red fort/red 1 hd.jpg" alt="War Memorial" /></a>
+          <img src="../../Images/Delhi/Red fort/red 1 hd.jpg" alt="War Memorial" /></a>
         <h3>Red Fort</h3>
       </div>
     </div>
     <!-- View More Button -->
-  <div class="view-more-container">
-    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
-  </div>
+    <div class="view-more-container">
+      <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
+    </div>
   </section>
 
 
 
 
-            <!-- Book Now Button -->
-      <a href="/Files/book.html" class="book-now-btn">Book Now</a>
+  <!-- Book Now Button -->
+  <a href="http://localhost:3000/bookTrip" class="book-now-btn">Book Now</a>
+
+
+
+  <footer class="foot-container">
+    <div class="foot-content">
+      <div class="foot-section foot-address">
+        <h3>Address</h3>
+        <p><strong>Main Office :</strong><br>
+          Ujwal Bhosael, Near Agarkar Wadi Road Chakan, Tal-Khed, Dist-Pune, pin-410501 .<br>
+          📞 Phone: <a href="tel:+918805224580">+91-8805224580</a>
+        </p>
+        <p><strong>Reg. Office :</strong><br>
+          Shrikan Deshmukh, kharabwadi, Chakan, Tal-Khed, Dist-Pune, pin-410501<br>
+          📞 Phone: <a href="tel:+91122588799">+91-122588799</a>
+        </p>
+      </div>
+
+      <div class="foot-section foot-news">
+        <h3>Recent News</h3>
+        <p>Trying to connect theoug Virtual Reality <br>📞 <a href="tel:+91122588799">Call +91-122588799</a></p>
+        <p>Book your Trip With us .<br>📞 <a href="tel:+91122588799">+91-122588799</a></p>
+        <p>Get big Discount on your First Trip <br>📞 <a href="tel:+91122588799">+91-122588799</a></p>
+      </div>
+
+      <div class="foot-section foot-contact">
+        <h3>Email Us</h3>
+        <form class="foot-form">
+          <input type="text" class="foot-input" placeholder="Your name">
+          <input type="email" class="foot-input" placeholder="Your email">
+          <textarea class="foot-textarea" placeholder="Your message"></textarea>
+          <button type="submit" class="foot-button">SEND</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>2025 © <a href="#">Copy Right from Ujwal</a></p>
+      <div class="foot-links">
+        <a href="./Files/about us.html">Support</a>
+        <a href="./Files/about us.html">Contact Us</a>
+        <a href="#">Disclaimer</a>
+        <a href="./Files/view all.html">More Tours</a>
+      </div>
+      <div class="foot-social">
+        <a href="#"><img src="./Images/our pics/twiter logo.png" alt="Twitter"></a>
+        <a href="#"><img src="./Images/our pics/fb logo.png" alt="Facebook"></a>
+        <a href="#"><img src="./Images/our pics/youtube logo.png" alt="YouTube"></a>
+        <a href="#"><img src="./Images/our pics/insta logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
 
 </body>
+
 </html>

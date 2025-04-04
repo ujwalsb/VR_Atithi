@@ -1,417 +1,379 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full-Screen Video with Photo Gallery</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Full-Screen Video with Photo Gallery</title>
+  <link rel="stylesheet" href="./CSS/index.css">
+
 </head>
+
 <body>
 
 
-    <style>
-        /* Reset default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    align-items: center;
-}
+  <style>
 
-/* Full-screen video background */
-
-#background-video {
-    width: 100%;
-    height: 730px;
-    object-fit: cover;
-    
-    
-}
-
-/* Content styling */
-.content {
-    position: relative;
-    text-align: center;
-    color: white;
-    padding-top: 10px; /* Space from the top */
-}
+  </style>
 
 
+  <!-- pop up message  -->
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
 
-/* image sliding */
-
-/* titel */
-.title_t1{
-  color: aqua;
-}
-
-    .slider-container {
-      align-self: center;
-      align-items: center;
-      width:auto;
-      height:max-content;
-      overflow: hidden;
-      position:relative;
-      
-    }
-    .slider {
-
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slide {
-      min-width: 100%;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      border-radius: 10px;
-      background-color: white;
-      margin: 10px;
-      padding: 20px;
-      text-align: center;
-      font-size: 1.5rem;
-    }
-    .slide-content {
-      border: 2px solid #ddd;
-      border-radius: 10px;
-      padding: 20px;
-    }
-    .slide-title {
-      font-size: 2rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: black;
-    }
-    .slide-description {
-      font-size: 1.2rem;
-      color: #666;
-      margin-bottom: 15px;
-    }
-    .slide-image {
-      width: 90%;
-      height:350px;
-      object-fit:cover;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
-
-    /* buttons for Next previv */
-    .prev,
-    .next {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
-      color: white;
-      border: none;
-      padding: 10px;
-      cursor: pointer;
-      font-size: 1.5rem;
-      border-radius: 10%;
-    }
-    .prev {
-      left: 10px;
-      align-content: center;
-    }
-    .next {
-      right: 10px;
-    }
-
-
-/* View All Button */
-.view-all {
-    background-color: #ff6347;
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.view-all:hover {
-    background-color: #e5533e;
-}
-
-
-
-/* drop down box  */
-.drop_down1{
-  border-radius: 10px;
-  display: block;
-  border: 2px solid #ea5409;
-  background-color: rgb(223, 232, 221);
-  padding: 10px;
-}
-
-.location {
-      border: 2px solid #007bff;
-      padding: 8px 12px;
-      font-family: Arial, sans-serif;
-      /* font-size: 16px; */
-      text-align: center;
-      width: 200px;
-      margin: 0 auto;
-      display: block;
-      border-radius: 5px;
-    }
-
-    .location:focus {
-      outline: none;
-      border-color: #0056b3;
-    }
-
-    label {
-      font-size: 20px;
-      margin-bottom: 10px;
-      display: block;
-      text-align: center;
-    }
-
-
-
-
-    /* button for virtual tour view more*/
-    .view-more-btn {
-      padding: 0.75rem 1.5rem;
-      background-color: #fff0ee;
-      color: #fff;
-      border: none;
-      font-size: 1rem;
-      border-radius: 4px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      align-items: center;
-    }
-
-    .view-more-btn:hover {
-      background-color: #cf3e2f;
-    }
-
-
-    /* pop up message */
-        /* Modal container styling */
-        .modal {
-            display: none; /* Hidden by default */
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
-        }
-
-        /* Modal content box */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        /* Close button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        /* Image styling */
-        .modal img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-        }
-
-
-
-
-
-    </style>
-
-
-<!-- pop up message  -->
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
+    <!-- Modal content -->
+    <div class="modal-content">
       <span class="close">&times;</span>
       <h2>Maha Kumbh</h2><a href="https://mahakumbhmediaregistration.in/">
-      <img src="/Images/Uttar Pradesh/up img/mah kumbh.jpg" alt="Popup Image">
-      <p>Visit indiest Biggest Maha Kumbh <br>
-        January 13 to February 26, 2025. </p></a>
+        <img src="./Images/Uttar Pradesh/up img/mah kumbh.jpg" alt="Popup Image">
+        <p>Visit indiest Biggest Maha Kumbh <br>
+          January 13 to February 26, 2025. </p>
+      </a>
+    </div>
+
   </div>
 
-</div>
+
+  <!-- Header / Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">VR ATITHI</div>
+      <ul class="nav-links">
+        <li><a href="./Files/view all.html">VR Tours</a></li>
+        <li><a href="./Files/about us.html">About Us</a></li>
+        <li><a href="http://localhost:3001/">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Full-screen video -->
+  <div class="video-background">
+    <video autoplay muted loop id="background-video">
+      <source src="Heritage.mp4" type="video/mp4">
+
+    </video>
+  </div>
 
 
 
-    <!-- Full-screen video -->
-    <div class="video-background">
-        <video autoplay muted loop id="background-video">
-            <source src="Heritage.mp4" type="video/mp4">
-            
-        </video>
+
+  <!-- drop down for destination -->
+  <div class="drop_down1">
+    <label for="location">Choose a Destination:</label>
+    <select class="location" onchange="redirectPage()">
+      <option value="">Select Destination</option>
+      <a href="./Files/Uttar Pradesh/UP.html">
+        <option value="/Files/Uttar Pradesh/UP.html">Uttar Pradesh</option>
+      </a>
+      <a href="./Files/Delhi/Delhi.html">
+        <option value="./Files/Delhi/Delhi.html">Delhi</option>
+      </a>
+      <a href="./Files/Tamil Nadu/Tamil.html">
+        <option value="./Files/Tamil Nadu/Tamil.html">Tamil Nadu</option>
+      </a>
+    </select>
+
+  </div>
+
+  <!-- pricing cards -->
+  <h1>Unforgettable cultural experiences</h1>
+
+  <div class="cards-container">
+
+    <!-- Card 1 -->
+    <div class="exp_card">
+      <a href="/Files/Uttar Pradesh/Ram Mandir.html">
+        <div class="badge">Original by GetYourGuide</div>
+        <img src="./Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="Tour Image 1" class="exp_card-img" />
+        <div class="exp_card-content">
+          <h2 class="exp_card-title">Ayodhya</h2>
+          <div class="rating-row">
+            <span class="rating-stars">★★★★☆</span>
+            <span class="rating-score">4.6 (319)</span>
+          </div>
+          <p class="price">From ₹ 6000 per person</p>
+          <p class="price">2 Days</p>
+        </div>
+      </a>
     </div>
 
-
-
-
-<!-- drop down for destination -->
-    <div class="drop_down1">
-      <label for="location">Choose a Destination:</label>
-      <select class="location" onchange="redirectPage()">
-        <option value="" >Select Destination</option>
-        <a href="/Files/Uttar Pradesh/UP.html"><option value="/Files/Uttar Pradesh/UP.html" >Uttar Pradesh</option></a>
-        <a href="./Files/Delhi/Delhi.html"><option value="./Files/Delhi/Delhi.html" >Delhi</option></a>
-        <a href="./Files/Tamil Nadu/Tamil.html"><option value="./Files/Tamil Nadu/Tamil.html" >Tamil Nadu</option></a>
-
-
-        
-      </select>
+    <!-- Card 2 -->
+    <div class="exp_card">
+      <a href="/Files/Uttar Pradesh/Mathura.html">
+        <div class="badge certified">Certified by GetYourGuide</div>
+        <img src="./Images/Uttar Pradesh/Mathara/math 1.jpg" alt="Tour Image 2" class="exp_card-img" />
+        <div class="exp_card-content">
+          <h2 class="exp_card-title">Mathura</h2>
+          <div class="rating-row">
+            <span class="rating-stars">★★★★★</span>
+            <span class="rating-score">4.8 (450)</span>
+          </div>
+          <p class="price">From ₹ 7500 per person</p>
+          <p class="price">2 Days</p>
+        </div>
+      </a>
     </div>
-  
-   
 
+    <!-- Card 3 -->
+    <div class="exp_card">
+      <a href="/Files/Delhi/Delhi.html">
+        <div class="badge">Original by GetYourGuide</div>
+        <img src="./Images/Delhi/GATE OF INDIA.jpg" alt="Tour Image 3" class="exp_card-img" />
+        <div class="exp_card-content">
+          <h2 class="exp_card-title">Delhi & Agra</h2>
+          <div class="rating-row">
+            <span class="rating-stars">★★★★☆</span>
+            <span class="rating-score">4.7 (207)</span>
+          </div>
+          <p class="price">From ₹12,000 per person</p>
+          <p class="price">5 Days</p>
+        </div>
+      </a>
+    </div>
 
-<!-- slider fro images -->
-<div class="slider-container" >
-  <!-- Content Section --> 
-  <div class="content">
-    <!-- Title -->
-    <h1 class="title_t1">Virtual Models</h1>
-
-
-    <!-- sliding images -->
-  <div class="slider" id="slider">
-    <div class="slide"><a href="/Files/Uttar Pradesh/Ram Mandir.html">
-      <div class="slide-content">
-        <img src="./Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="Image 1" class="slide-image" />
-        <div class="slide-title">Ram Mandir</div>
-        <div class="slide-description"></div></a>
+    <!-- Card 4 -->
+    <div class="exp_card">
+      <div class="badge">Original by GetYourGuide</div>
+      <img src="./Images/Tamil Nadu/jagnath puri.webp" alt="Tour Image 4" class="exp_card-img" />
+      <div class="exp_card-content">
+        <h2 class="exp_card-title">Odisa</h2>
+        <div class="rating-row">
+          <span class="rating-stars">★★★★☆</span>
+          <span class="rating-score">4.5 (123)</span>
+        </div>
+        <p class="price">From ₹ 10,000 per person</p>
+        <p class="price">4 Days</p>
       </div>
     </div>
-    <div class="slide"><a href="./Files/Uttar Pradesh/Taj Mahal.html">
-      <div class="slide-content">
-        <img src="/Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="Image 2" class="slide-image" />
-        <div class="slide-title">Taj Mahal</div>
-        <div class="slide-description"></div></a>
+
+  </div>
+
+
+
+  <!-- slider fro images -->
+  <div class="slider-container">
+    <!-- Content Section -->
+    <div class="content">
+      <!-- Title -->
+      <h1 class="title_t1">Virtual Models</h1>
+
+
+      <!-- sliding images -->
+      <div class="slider" id="slider">
+        <div class="slide"><a href="/Files/Uttar Pradesh/Ram Mandir.html">
+            <div class="slide-content">
+              <img src="./Images/Uttar Pradesh/ram mandir/ram 1.jpg" alt="Image 1" class="slide-image" />
+              <div class="slide-title">Ram Mandir</div>
+              <div class="slide-description"></div>
+          </a>
+        </div>
+      </div>
+      <div class="slide"><a href="./Files/Uttar Pradesh/Taj Mahal.html">
+          <div class="slide-content">
+            <img src="./Images/Uttar Pradesh/Taj mahal/taj hd1.jpg" alt="Image 2" class="slide-image" />
+            <div class="slide-title">Taj Mahal</div>
+            <div class="slide-description"></div>
+        </a>
       </div>
     </div>
     <div class="slide">
       <div class="slide-content"><a href="/Files/Delhi/Red fort.html">
-        <img src="/Images/Delhi/Red fort/red 1 hd.jpg" alt="Image 3" class="slide-image" />
-        <div class="slide-title">Red Fort</div>
-        <div class="slide-description"></div></a>
+          <img src="./Images/Delhi/Red fort/red 1 hd.jpg" alt="Image 3" class="slide-image" />
+          <div class="slide-title">Red Fort</div>
+          <div class="slide-description"></div>
+        </a>
       </div>
     </div>
     <div class="slide"><a href="/Files/Uttar Pradesh/Mathura.html">
-      <div class="slide-content">
-        <img src="/Images/Uttar Pradesh/Mathara/math 2.jpg" alt="Image 4" class="slide-image" />
-        <div class="slide-title">Mathura</div>
-        <div class="slide-description"></div></a>
-      </div>
+        <div class="slide-content">
+          <img src="./Images/Uttar Pradesh/Mathara/math 2.jpg" alt="Image 4" class="slide-image" />
+          <div class="slide-title">Mathura</div>
+          <div class="slide-description"></div>
+      </a>
     </div>
-    <div class="slide"><a href="/Files/Uttar Pradesh/Kashi.html">
+  </div>
+  <div class="slide"><a href="/Files/Uttar Pradesh/Kashi.html">
       <div class="slide-content">
-        <img src="/Images/Uttar Pradesh/Kashi/kashi 1.jpg" alt="Image 5" class="slide-image" />
+        <img src="./Images/Uttar Pradesh/Kashi/kashi 1.jpg" alt="Image 5" class="slide-image" />
         <div class="slide-title">Kashi Vishwanath Temple</div>
-        <div class="slide-description"></div></a>
-      </div>
-    </div>
-   
-    
-    
+        <div class="slide-description"></div>
+    </a>
+  </div>
+  </div>
+
+
+
   </div>
   <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
   <button class="next" onclick="moveSlide(1)">&#10095;</button>
-<!-- View More Button -->
-<div class="view-more-container">
-  <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
-</div>
-  
-</div>
-<script>
-  // sliding left and right 
-  let currentIndex = 0;
-  const slider = document.getElementById('slider');
-  const totalSlides = document.querySelectorAll('.slide').length;
+  <!-- View More Button -->
 
-  function moveSlide(direction) {
-    currentIndex += direction;
-    if (currentIndex < 0) {
-      currentIndex = totalSlides - 1;
-    } else if (currentIndex >= totalSlides) {
-      currentIndex = 0;
+
+  </div>
+  <script>
+    // sliding left and right 
+    let currentIndex = 0;
+    const slider = document.getElementById('slider');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    function moveSlide(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) {
+        currentIndex = totalSlides - 1;
+      } else if (currentIndex >= totalSlides) {
+        currentIndex = 0;
+      }
+      slider.style.transform = `translateX(-${currentIndex * 100}%)`;
     }
-    slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-  }
 
-  function redirectPage() {
+    function redirectPage() {
       var selectedLocation = document.querySelector('.location').value;
       if (selectedLocation) {
         window.location.href = selectedLocation;
       }
     }
+    //  sliding bar end
 
 
 
-  //  pop script
+
+
+    // pop ou
     // Get modal elements
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
 
-    // Show the modal immediately when the page loads (after refresh)
-    window.onload = function() {
+    // Show the modal only the first time the user visits the website
+    window.onload = function () {
+      // Check if the modal has already been shown
+      if (!localStorage.getItem("modalShown")) {
         modal.style.display = "block";
+        localStorage.setItem("modalShown", "true"); // Set the flag after showing the modal
+      }
     }
 
     // Close the modal when the "x" is clicked
-    span.onclick = function() {
-        modal.style.display = "none";
+    span.onclick = function () {
+      modal.style.display = "none";
     }
 
     // Close the modal when clicking outside of the modal content
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
     }
 
-</script>
 
-
- 
-  <!-- View More Button
-  <div class="view-more-container">
-    <button class="view-more-btn" onclick="window.location.href='more-attractions.html';">View More</button>
-  </div> -->
-
-
-        <!-- View All Button -->
-        <!-- <button class="view-all" href="./files/all_place.html">View All</button> -->
-<!-- 
-        <a href="./files/all_place.html"> 
-            <button class="view-all">View All</button>
-      </a> -->
-    <!-- </div> -->
+  </script>
 
 
 
-    
+  <!-- trending destination -->
+  <h1>Trending destinations</h1>
+
+  <div class="destinations-container">
+
+    <!-- Card 1 -->
+    <div class="destination-card">
+      <img src="./Images/Uttar Pradesh/Taj mahal/taj 3.jpg" alt="New Delhi" class="destination-image" />
+      <div class="destination-overlay">
+        <span>New Delhi 🇮🇳</span>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="destination-card">
+      <img src="./Images/Delhi/humpi.jpg" alt="Bangalore" class="destination-image" />
+      <div class="destination-overlay">
+        <span>Karnatak 🇮🇳</span>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="destination-card">
+      <img src="./Images/Delhi/gold.jpg" alt="Mumbai" class="destination-image" />
+      <div class="destination-overlay">
+        <span>Punjab 🇮🇳</span>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="destination-card">
+      <img src="./Images/Delhi/sun temple.jpg" alt="Chennai" class="destination-image" />
+      <div class="destination-overlay">
+        <span>Odisa 🇮🇳</span>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="destination-card">
+      <img src="./Images/Uttar Pradesh/Kashi/kashi 3.jpg" alt="Hyderabad" class="destination-image" />
+      <div class="destination-overlay">
+        <span>Kashi Vishwanath 🇮🇳</span>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <footer class="foot-container">
+    <div class="foot-content">
+      <div class="foot-section foot-address">
+        <h3>Address</h3>
+        <p><strong>Main Office :</strong><br>
+          Ujwal Bhosael, Near Agarkar Wadi Road Chakan, Tal-Khed, Dist-Pune, pin-410501 .<br>
+          📞 Phone: <a href="tel:+918805224580">+91-8805224580</a>
+        </p>
+        <p><strong>Reg. Office :</strong><br>
+          Shrikan Deshmukh, kharabwadi, Chakan, Tal-Khed, Dist-Pune, pin-410501<br>
+          📞 Phone: <a href="tel:+91122588799">+91-122588799</a>
+        </p>
+      </div>
+
+      <div class="foot-section foot-news">
+        <h3>Recent News</h3>
+        <p>Trying to connect theoug Virtual Reality <br>📞 <a href="tel:+91122588799">Call +91-122588799</a></p>
+        <p>Book your Trip With us .<br>📞 <a href="tel:+91122588799">+91-122588799</a></p>
+        <p>Get big Discount on your First Trip <br>📞 <a href="tel:+91122588799">+91-122588799</a></p>
+      </div>
+
+      <div class="foot-section foot-contact">
+        <h3>Email Us</h3>
+        <form class="foot-form">
+          <input type="text" class="foot-input" placeholder="Your name">
+          <input type="email" class="foot-input" placeholder="Your email">
+          <textarea class="foot-textarea" placeholder="Your message"></textarea>
+          <button type="submit" class="foot-button">SEND</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="foot-bottom">
+      <p>2025 © <a href="#">Copy Right from Ujwal</a></p>
+      <div class="foot-links">
+        <a href="./Files/about us.html">Support</a>
+        <a href="./Files/about us.html">Contact Us</a>
+        <a href="#">Disclaimer</a>
+        <a href="./Files/view all.html">More Tours</a>
+      </div>
+      <div class="foot-social">
+        <a href="#"><img src="./Images/our pics/twiter logo.png" alt="Twitter"></a>
+        <a href="#"><img src="./Images/our pics/fb logo.png" alt="Facebook"></a>
+        <a href="#"><img src="./Images/our pics/youtube logo.png" alt="YouTube"></a>
+        <a href="#"><img src="./Images/our pics/insta logo.png" alt="Instagram"></a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
 
 </body>
+
 </html>
